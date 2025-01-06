@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient-bg {
+            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+        }
+        .fade-in {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        
+        .card {
+            height: 300px; 
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+        .card-hover-quote {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .card:hover .card-hover-quote {
+            opacity: 1;
+        } 
+            
+       
+
+        .bg-video::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        html {
+            scroll-behavior: smooth;
+          }
+          
+
+          
+
+.bg-blur {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-slide-down {
+    animation: slide-down 0.5s ease-out forwards;
+  }
+
+  
+ @font-face {
+  font-family: 'TAN-NIMBUS';
+  src: url('./Fonts/TAN-NIMBUS.otf');
+ }
+
+  @font-face {
+    font-family: 'EFCO';
+  src: url('./Fonts/EFCO.ttf');
+  }
+
+  @font-face {
+    font-family: 'natsu-regular';
+  src: url('./Fonts/natsu-regular.otf');
+  }
+  @font-face {
+    font-family: 'beachy-regular';
+  src: url('./Fonts/beachy-regular.ttf');
+  }
+
+
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  
+  .animate-fade-in-out {
+    animation: fadeInOut 2s ease-in-out infinite;
+  }
